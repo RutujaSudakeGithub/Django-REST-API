@@ -121,3 +121,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# works only with generics and viewset
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE':2,
+}
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE':2,
+# }
